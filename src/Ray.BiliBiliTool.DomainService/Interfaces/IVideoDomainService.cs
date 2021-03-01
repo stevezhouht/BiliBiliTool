@@ -12,10 +12,17 @@ namespace Ray.BiliBiliTool.DomainService.Interfaces
     public interface IVideoDomainService : IDomainService
     {
         /// <summary>
-        /// 获取一个随机视频aid
+        /// 获取视频详情
+        /// </summary>
+        /// <param name="aid"></param>
+        /// <returns></returns>
+        VideoDetail GetVideoDetail(string aid);
+
+        /// <summary>
+        /// 从排行榜获取一个随机视频
         /// </summary>
         /// <returns></returns>
-        Tuple<string, string> GetRandomVideoOfRegion();
+        RankingInfo GetRandomVideoOfRanking();
 
         /// <summary>
         /// 从某个指定UP下获取随机视频
